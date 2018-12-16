@@ -4,26 +4,21 @@ extension Observable {
     func subscribe(on queue: DispatchQueue) -> Observable<Element> {
         let subscribe = self.subscribe(observer:)
         return Observable { observer in
-            /*
-             Here, the disposed boolean should be atomic :P
-             Current implementation assumes it is
-             */
-            var disposed = false
-            var disposable: Disposable?
+            var nestedDisposable: Disposable?
+            let disposable = Disposable {
+                nestedDisposable?.dispose()
+            }
             
             queue.async {
                 let resultingDisposable = subscribe(observer)
-                if disposed { // Remember, it's atomic
-                    resultingDisposable()
+                if disposable.disposed { // Remember, it's atomic
+                    resultingDisposable.dispose()
                 } else {
-                    disposable = resultingDisposable
+                    nestedDisposable = resultingDisposable
                 }
             }
             
-            return {
-                disposable?()
-                disposed = true
-            }
+            return disposable
         }
     }
 }

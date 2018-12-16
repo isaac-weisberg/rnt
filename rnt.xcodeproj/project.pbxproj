@@ -16,7 +16,7 @@
 		5C155DF821BBFE6900AF0671 /* Observable+subscribeOnSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C155DF721BBFE6900AF0671 /* Observable+subscribeOnSync.swift */; };
 		5C155DFE21BC012400AF0671 /* Observable+observeOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C155DFD21BC012400AF0671 /* Observable+observeOn.swift */; };
 		5C155E0021BC01E600AF0671 /* Observable+observeOnSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C155DFF21BC01E600AF0671 /* Observable+observeOnSync.swift */; };
-		5C155E0221BC02DC00AF0671 /* Observable+flatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C155E0121BC02DC00AF0671 /* Observable+flatMap.swift */; };
+		5C8AC2CC21C6B1AA009941D1 /* AtomicBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AC2CB21C6B1AA009941D1 /* AtomicBool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		5C155DF721BBFE6900AF0671 /* Observable+subscribeOnSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+subscribeOnSync.swift"; sourceTree = "<group>"; };
 		5C155DFD21BC012400AF0671 /* Observable+observeOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+observeOn.swift"; sourceTree = "<group>"; };
 		5C155DFF21BC01E600AF0671 /* Observable+observeOnSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+observeOnSync.swift"; sourceTree = "<group>"; };
-		5C155E0121BC02DC00AF0671 /* Observable+flatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+flatMap.swift"; sourceTree = "<group>"; };
+		5C8AC2CB21C6B1AA009941D1 /* AtomicBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicBool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 				5C155DF721BBFE6900AF0671 /* Observable+subscribeOnSync.swift */,
 				5C155DFD21BC012400AF0671 /* Observable+observeOn.swift */,
 				5C155DFF21BC01E600AF0671 /* Observable+observeOnSync.swift */,
-				5C155E0121BC02DC00AF0671 /* Observable+flatMap.swift */,
+				5C8AC2CB21C6B1AA009941D1 /* AtomicBool.swift */,
 			);
 			path = rnt;
 			sourceTree = "<group>";
@@ -159,12 +159,12 @@
 			files = (
 				5C155DFE21BC012400AF0671 /* Observable+observeOn.swift in Sources */,
 				5C155DEE21BBF2DD00AF0671 /* Observable.swift in Sources */,
-				5C155E0221BC02DC00AF0671 /* Observable+flatMap.swift in Sources */,
 				5C155E0021BC01E600AF0671 /* Observable+observeOnSync.swift in Sources */,
 				5C155DF221BBF78000AF0671 /* Observer.swift in Sources */,
 				5C155DF621BBFD8D00AF0671 /* Observable+subscribeOn.swift in Sources */,
 				5C155DF421BBFBB100AF0671 /* Observable+filter.swift in Sources */,
 				5C155DF021BBF58100AF0671 /* Observable+map.swift in Sources */,
+				5C8AC2CC21C6B1AA009941D1 /* AtomicBool.swift in Sources */,
 				5C155DF821BBFE6900AF0671 /* Observable+subscribeOnSync.swift in Sources */,
 				5C155DE821BBF10600AF0671 /* Disposable.swift in Sources */,
 			);
