@@ -11,11 +11,7 @@ extension Observable {
                     return
                 }
                 observer.onNext(value)
-            }, onError: { error in
-                observer.onError(error)
-            }, onCompleted: {
-                observer.onCompleted()
-            }))
+            }, onError: observer.onError, onCompleted: observer.onCompleted))
         }
     }
 }

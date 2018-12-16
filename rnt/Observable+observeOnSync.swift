@@ -13,9 +13,7 @@ extension Observable {
                     observer.onError(error)
                 }
             }, onCompleted: {
-                queue.sync {
-                    observer.onCompleted()
-                }
+                queue.sync(execute: observer.onCompleted)
             }))
         }
     }

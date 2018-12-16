@@ -6,11 +6,7 @@ extension Observable {
                 if predicate(element) {
                     observer.onNext(element)
                 }
-            }, onError: { error in
-                observer.onError(error)
-            }, onCompleted: {
-                observer.onCompleted()
-            }))
+            }, onError: observer.onError, onCompleted: observer.onCompleted))
         }
     }
 }
