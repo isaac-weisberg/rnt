@@ -11,8 +11,8 @@ extension Observable {
             
             queue.async {
                 let resultingDisposable = subscribe(observer)
-                if disposable.disposed { // Remember, it's atomic
-                    resultingDisposable.dispose()
+                if disposable.disposed {
+                    resultingDisposable?.dispose()
                 } else {
                     nestedDisposable = resultingDisposable
                 }

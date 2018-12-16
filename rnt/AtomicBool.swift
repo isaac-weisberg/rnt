@@ -1,1 +1,1 @@
-typealias AtomicBool = Bool
+public typealias AtomicBool = Bool

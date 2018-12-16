@@ -1,18 +1,18 @@
-class Disposable {
-    typealias Predicate = () -> Void
+public class Disposable {
+    public typealias Predicate = () -> Void
     
-    var disposed: AtomicBool = false
+    public var disposed: AtomicBool = false
     
-    let predicate: Predicate?
+    let predicate: Predicate
     
-    func dispose() {
+    public func dispose() {
         if !disposed {
-            predicate?()
+            predicate()
             disposed = true
         }
     }
     
-    init(predicate: Predicate?) {
+    public init(predicate: @escaping Predicate) {
         self.predicate = predicate
     }
 }
